@@ -5,6 +5,7 @@ import {Fade, Roll, Slide, Rotate, Flip} from 'react-reveal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Particles from 'react-particles-js'; 
 import 'holderjs';
+import Scrollspy from "react-scrollspy";
 
 function App() {
   return (
@@ -59,16 +60,26 @@ function App() {
           </Fade>
         </div>
       </header>
-      <Navbar sticky="top" bg="dark" variant="dark">
-          <Nav className="mr-auto">
-            <Nav.Link className="px-4 py-2" href="#home">Front-End</Nav.Link>
-            <Nav.Link className="px-4 py-2" href="#features" active>Back-End</Nav.Link>
-            <Nav.Link className="px-4 py-2" href="#pricing">Portfolio</Nav.Link>
-          </Nav>
-      </Navbar>
-      <div className="frontEnd">
+        <Navbar sticky="top" bg="dark" variant="dark">
+            <Nav className="mr-auto">
+            <Scrollspy
+        items={[
+          "frontEnd",
+          "backEnd",
+          "portfolio"
+        ]}
+        currentClassName="active" 
+        style={{display: "flex", "margin-bottom": 0}}
+        >
+              <Nav.Link eventKey={1} className="px-4 py-2" href="#frontEnd">Front-End</Nav.Link>
+              <Nav.Link eventKey={2} className="px-4 py-2" href="#backEnd">Back-End</Nav.Link>
+              <Nav.Link eventKey={3} className="px-4 py-2" href="#portfolio">Portfolio</Nav.Link>
+              </Scrollspy>
+            </Nav>
+        </Navbar>
+      <div className="frontEnd" id="frontEnd">
         <div className="catTitle">
-          <h1>Back-End Skills:</h1>
+          <h1>Front-End Skills:</h1>
         </div>
         <br />
         <Roll left>
@@ -127,9 +138,9 @@ function App() {
         </Roll>
       
       </div>
-      <div className="frontEnd">
+      <div className="frontEnd" id="backEnd">
         <div className="catTitle">
-          <h1>Front-End Skills:</h1>
+          <h1>Back-End Skills:</h1>
         </div>
         <br />
         <Roll right>
@@ -187,7 +198,7 @@ function App() {
           </Card>
       </Roll>
       </div>
-      <div className="frontEnd">
+      <div className="frontEnd" id="portfolio">
         <div className="catTitle">
           <h1>Portfolio:</h1>
         </div>

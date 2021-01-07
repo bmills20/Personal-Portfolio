@@ -109,7 +109,7 @@
 }
 
 .px-4:hover {
-  color: #58A4B0 !important;
+  color: #58A4B0 !important; /* use this somewhere: #dc2f02 */
   text-decoration: none !important;
 }
 
