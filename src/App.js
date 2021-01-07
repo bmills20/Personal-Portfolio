@@ -5,7 +5,7 @@ import {Fade, Roll, Slide, Rotate, Flip} from 'react-reveal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Particles from 'react-particles-js'; 
 import 'holderjs';
-import Scrollspy from "react-scrollspy";
+import ScrollspyNav from "react-scrollspy-nav";
 
 function App() {
   return (
@@ -62,19 +62,18 @@ function App() {
       </header>
         <Navbar sticky="top" bg="dark" variant="dark">
             <Nav className="mr-auto">
-            <Scrollspy
-        items={[
+            <ScrollspyNav
+        scrollTargetIds={[
           "frontEnd",
           "backEnd",
           "portfolio"
         ]}
-        currentClassName="active" 
-        style={{display: "flex", "margin-bottom": 0}}
+        activeNavClass="active" 
         >
               <Nav.Link eventKey={1} className="px-4 py-2" href="#frontEnd">Front-End</Nav.Link>
               <Nav.Link eventKey={2} className="px-4 py-2" href="#backEnd">Back-End</Nav.Link>
               <Nav.Link eventKey={3} className="px-4 py-2" href="#portfolio">Portfolio</Nav.Link>
-              </Scrollspy>
+              </ScrollspyNav>
             </Nav>
         </Navbar>
       <div className="frontEnd" id="frontEnd">

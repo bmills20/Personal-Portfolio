@@ -104,6 +104,11 @@
   display: block;
 }
 
+.mr-auto > div{
+  display: flex; 
+  margin-bottom: 0;
+}
+
 .nav-link.active {
   font-weight: 600;
 }
