@@ -267,19 +267,6 @@ function App() {
             </Card.Body>
           </Card>
       </Roll>
-      <Roll right delay={2500}>
-          <Card className="bg-dark text-white mb-3">
-          <Card.Img variant="top" src="holder.js/100px100" />
-            <Card.Body>
-                <Card.Title>
-                  Project 6
-                </Card.Title>
-                <Card.Text>
-                  Project Description
-                </Card.Text>
-            </Card.Body>
-          </Card>
-      </Roll>
       </div>
     </div>
   );
