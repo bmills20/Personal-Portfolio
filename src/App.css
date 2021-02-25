@@ -36,6 +36,10 @@
   line-height: 2em;
 }
 
+#backend {
+  margin-bottom: 10vw;
+}
+
 .headerText {
   display: flex;
   flex-direction: column;
@@ -58,13 +62,36 @@
   justify-content: center;
 }
 
+#portfolio .portfolioRow > h1 {
+  width: 100%;
+}
+
+.frontEnd .portfolioRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .frontEnd .card-title {
-  margin-bottom: 0 !important;
+  margin-bottom: 1em !important;
+  margin-top: 1em !important;
 }
 
 .frontEnd .card {
+  max-width: 225px;
   margin: 1.2vw;
 }
+
+.portfolioTitle {
+  text-align: center;
+}
+
+#listp1 > .list-group-item {
+  background-color: #343a40!important;
+}
+
 .catTitle {
   text-align: left;
   margin-right: 4.0vw;

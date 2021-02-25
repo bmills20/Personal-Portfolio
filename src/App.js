@@ -198,75 +198,71 @@ function App() {
       </Roll>
       </div>
       <div className="frontEnd" id="portfolio">
-        <div className="catTitle">
-          <h1>Portfolio:</h1>
-        </div>
-        <br />
-        <Roll right>
-          <Card className="bg-dark text-white mb-3">
-          <Card.Img variant="top" src="holder.js/100px100" />
-            <Card.Body>
-                <Card.Title>
-                  Project 1
-                </Card.Title>
-                <Card.Text>
-                  Project Description
-                </Card.Text>
-            </Card.Body>
-          </Card>
+        <div className="portfolioRow"> 
+        <h1>Portfolio:</h1> 
+          <br /><br /><br />
+          <Roll right>
+            <Card className="bg-dark text-white mb-3">
+            <Card.Img variant="top" src='p1.png' />
+              <Card.Body>
+                  <Card.Title>
+                    Portfolio Website
+                  </Card.Title>
+                  <Card.Text>
+                    Portfolio website developed from scratch for myself.
+                  </Card.Text>
+              </Card.Body>
+              <ListGroup className="list-group-flush" id="listp1">
+                <ListGroupItem class="bg-dark">Front-End</ListGroupItem>
+                <ListGroupItem>React</ListGroupItem>
+                <ListGroupItem>React-Bootstrap</ListGroupItem>
+                <ListGroupItem>
+                  <Card.Link href="braxtonmills.com">Demo</Card.Link>
+                  <Card.Link href="https://github.com/bmills20/bmills20.github.io">github</Card.Link>
+                </ListGroupItem>
+              </ListGroup>
+            </Card>
+          </Roll>
+        <Roll right delay={500}>
+            <Card className="bg-dark text-white mb-3">
+            <Card.Img variant="top" src="holder.js/225x125" />
+              <Card.Body>
+                  <Card.Title>
+                    Project 2
+                  </Card.Title>
+                  <Card.Text>
+                    Project Description
+                  </Card.Text>
+              </Card.Body>
+            </Card>
         </Roll>
-      <Roll right delay={500}>
-          <Card className="bg-dark text-white mb-3">
-          <Card.Img variant="top" src="holder.js/100px100" />
-            <Card.Body>
-                <Card.Title>
-                  Project 2
-                </Card.Title>
-                <Card.Text>
-                  Project Description
-                </Card.Text>
-            </Card.Body>
-          </Card>
-      </Roll>
-      <Roll right delay={1000}>
-          <Card className="bg-dark text-white mb-3">
-          <Card.Img variant="top" src="holder.js/100px100" />
-            <Card.Body>
-                <Card.Title>
-                  Project 3
-                </Card.Title>
-                <Card.Text>
-                  Project Description
-                </Card.Text>
-            </Card.Body>
-          </Card>
-      </Roll>
-      <Roll right delay={1500}>
-          <Card className="bg-dark text-white mb-3">
-          <Card.Img variant="top" src="holder.js/100px100" />
-            <Card.Body>
-                <Card.Title>
-                  Project 4
-                </Card.Title>
-                <Card.Text>
-                  Project Description
-                </Card.Text>
-            </Card.Body>
-          </Card>
-      </Roll>
-      <Roll right delay={2000}>
-          <Card className="bg-dark text-white mb-3">
-          <Card.Img variant="top" src="holder.js/100px100" />
-            <Card.Body>
-                <Card.Title>
-                  Project 5
-                </Card.Title>
-                <Card.Text>
-                  Project Description
-                </Card.Text>
-            </Card.Body>
-          </Card>
-      </Roll>
+        <Roll right delay={1000}>
+            <Card className="bg-dark text-white mb-3">
+            <Card.Img variant="top" src="holder.js/225x125" />
+              <Card.Body>
+                  <Card.Title>
+                    Project 3
+                  </Card.Title>
+                  <Card.Text>
+                    Project Description
+                  </Card.Text>
+              </Card.Body>
+            </Card>
+        </Roll>
+        <Roll right delay={1500}>
+            <Card className="bg-dark text-white mb-3">
+            <Card.Img variant="top" src="holder.js/225x125" />
+              <Card.Body>
+                  <Card.Title>
+                    Project 4
+                  </Card.Title>
+                  <Card.Text>
+                    Project Description
+                  </Card.Text>
+              </Card.Body>
+            </Card>
+        </Roll>
+        </div>
       </div>
     </div>
   );
