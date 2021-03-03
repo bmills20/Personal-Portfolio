@@ -68,7 +68,8 @@ function App() {
           "backEnd",
           "portfolio"
         ]}
-        activeNavClass="active" 
+        activeNavClass="active"
+        offset={-25} 
         >
               <Nav.Link eventKey={1} className="px-4 py-2" href="#frontEnd">Front-End</Nav.Link>
               <Nav.Link eventKey={2} className="px-4 py-2" href="#backEnd">Back-End</Nav.Link>
@@ -81,6 +82,7 @@ function App() {
           <h1>Front-End Skills:</h1>
         </div>
         <br />
+        <div className="skillFlex">
         <Roll left>
           <Card className="bg-dark text-white mb-3">
             <Card.Body>
@@ -135,67 +137,69 @@ function App() {
             </Card.Body>
           </Card>
         </Roll>
-      
+        </div>
       </div>
       <div className="frontEnd" id="backEnd">
         <div className="catTitle">
           <h1>Back-End Skills:</h1>
         </div>
         <br />
-        <Roll right>
-          <Card className="bg-dark text-white mb-3">
-            <Card.Body>
-                <Card.Title>
-                  Python
-                </Card.Title>
-            </Card.Body>
-          </Card>
+        <div className="skillFlex">
+          <Roll right>
+            <Card className="bg-dark text-white mb-3">
+              <Card.Body>
+                  <Card.Title>
+                    Python
+                  </Card.Title>
+              </Card.Body>
+            </Card>
+          </Roll>
+        <Roll right delay={500}>
+            <Card className="bg-dark text-white mb-3">
+              <Card.Body>
+                  <Card.Title>
+                    Java
+                  </Card.Title>
+              </Card.Body>
+            </Card>
         </Roll>
-      <Roll right delay={500}>
-          <Card className="bg-dark text-white mb-3">
-            <Card.Body>
-                <Card.Title>
-                  Java
-                </Card.Title>
-            </Card.Body>
-          </Card>
-      </Roll>
-      <Roll right delay={1000}>
-          <Card className="bg-dark text-white mb-3">
-            <Card.Body>
-                <Card.Title>
-                  PHP
-                </Card.Title>
-            </Card.Body>
-          </Card>
-      </Roll>
-      <Roll right delay={1500}>
-          <Card className="bg-dark text-white mb-3">
-            <Card.Body>
-                <Card.Title>
-                  SQL
-                </Card.Title>
-            </Card.Body>
-          </Card>
-      </Roll>
-      <Roll right delay={2000}>
-          <Card className="bg-dark text-white mb-3">
-            <Card.Body>
-                <Card.Title>
-                  Node.js
-                </Card.Title>
-            </Card.Body>
-          </Card>
-      </Roll>
-      <Roll right delay={2500}>
-          <Card className="bg-dark text-white mb-3">
-            <Card.Body>
-                <Card.Title>
-                  MongoDB
-                </Card.Title>
-            </Card.Body>
-          </Card>
-      </Roll>
+        <Roll right delay={1000}>
+            <Card className="bg-dark text-white mb-3">
+              <Card.Body>
+                  <Card.Title>
+                    PHP
+                  </Card.Title>
+              </Card.Body>
+            </Card>
+        </Roll>
+        <Roll right delay={1500}>
+            <Card className="bg-dark text-white mb-3">
+              <Card.Body>
+                  <Card.Title>
+                    SQL
+                  </Card.Title>
+              </Card.Body>
+            </Card>
+        </Roll>
+        <Roll right delay={2000}>
+            <Card className="bg-dark text-white mb-3">
+              <Card.Body>
+                  <Card.Title>
+                    Node.js
+                  </Card.Title>
+              </Card.Body>
+            </Card>
+        </Roll>
+        <Roll right delay={2500}>
+            <Card className="bg-dark text-white mb-3">
+              <Card.Body>
+                  <Card.Title>
+                    MongoDB
+                  </Card.Title>
+              </Card.Body>
+            </Card>
+        </Roll>
+        </div>
       </div>
       <div className="frontEnd" id="portfolio">
         <div className="portfolioRow"> 

@@ -60,10 +60,26 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.skillFlex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #portfolio .portfolioRow > h1 {
   width: 100%;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+#frontEnd .card-title, #backEnd .card-title {
+  margin-bottom: 0;
 }
 
 .frontEnd .portfolioRow {
@@ -72,9 +88,10 @@
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #1B1B1E;
 }
 
-.frontEnd .card-title {
+#portfolio .card-title {
   margin-bottom: 1em !important;
   margin-top: 1em !important;
 }
