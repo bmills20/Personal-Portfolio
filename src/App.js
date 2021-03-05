@@ -6,6 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Particles from 'react-particles-js'; 
 import 'holderjs';
 import ScrollspyNav from "react-scrollspy-nav";
+import Button from '@material-ui/core/Button';
+
+/*const useStyles = makeStyles({
+  root: {
+    maxWidth: 310,
+    transition: "transform"
+  }
+})*/
 
 function App() {
   return (
@@ -207,7 +215,7 @@ function App() {
           <br /><br /><br />
           <Roll right>
             <Card className="bg-dark text-white mb-3">
-            <Card.Img variant="top" src='p1.png' />
+            <Card.Img variant="top" src='p1.png' id="folio1" />
               <Card.Body>
                   <Card.Title>
                     Portfolio Website
@@ -218,8 +226,9 @@ function App() {
               </Card.Body>
               <ListGroup className="list-group-flush" id="listp1">
                 <ListGroupItem class="bg-dark">Front-End</ListGroupItem>
+                <ListGroupItem class="bg-dark">HTML/CSS</ListGroupItem>
                 <ListGroupItem>React</ListGroupItem>
-                <ListGroupItem>React-Bootstrap</ListGroupItem>
+                <ListGroupItem>JavaScript</ListGroupItem>
                 <ListGroupItem>
                   <Card.Link href="braxtonmills.com">Demo</Card.Link>
                   <Card.Link href="https://github.com/bmills20/bmills20.github.io">github</Card.Link>
@@ -229,15 +238,27 @@ function App() {
           </Roll>
         <Roll right delay={500}>
             <Card className="bg-dark text-white mb-3">
-            <Card.Img variant="top" src="holder.js/225x125" />
+            <Card.Img variant="top" src="p2.png" id="folio2" />
               <Card.Body>
                   <Card.Title>
-                    Project 2
+                    Beyond the Veil
                   </Card.Title>
                   <Card.Text>
-                    Project Description
+                    Side-scroller web-based JavaScript game
                   </Card.Text>
               </Card.Body>
+              <ListGroup className="list-group-flush" id="listp1">
+                <ListGroupItem class="bg-dark">Front-End</ListGroupItem>
+                <ListGroupItem>JavaScript</ListGroupItem>
+                <ListGroupItem>Physics Simulation</ListGroupItem>
+                <ListGroupItem>Graphic Design</ListGroupItem>
+                <ListGroupItem>Sony Vegas</ListGroupItem>
+                <ListGroupItem>
+                  <Card.Link href="https://raithhamzah.itch.io/beyond-the-veil-dreamphase">Demo</Card.Link>
+                  <Card.Link href="https://github.com/dream-phase/beyond-the-veil">github</Card.Link>
+                  <Card.Link href="https://www.youtube.com/watch?v=pE9Y9WbfwPU">Trailer</Card.Link>
+                </ListGroupItem>
+              </ListGroup>
             </Card>
         </Roll>
         <Roll right delay={1000}>

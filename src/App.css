@@ -52,6 +52,15 @@
   color: #61dafb;
 }
 
+/* transition: target property_duration speed_curve */
+
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
 
 .frontEnd {
   height: 100vh;
@@ -76,6 +85,10 @@
   width: 100%;
   margin-top: 10vh;
   margin-bottom: 5vh;
+}
+
+#folio1:hover {
+  background-image: url("https://media.giphy.com/media/QMkPpxPDYY0fu/giphy.gif");
 }
 
 #frontEnd .card-title, #backEnd .card-title {
