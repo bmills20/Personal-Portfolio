@@ -16,18 +16,19 @@ import ScrollspyNav from "react-scrollspy-nav";
   }
 })*/
 class myPortfolio extends Component {
-  constructor() {
-    super();
-    this.state = { show: false };
+  constructor(props) {
+    super(props);
+    this.state = { show: true };
     // Set up 'this' variable for setActivePic method
     this.toggleStaticPic = this.toggleStaticPic.bind(this);
+    // Create ref to the first portfolio's photo
+    this.photo1 = React.createRef();
   }
 
   toggleStaticPic(){
     this.setState(state => ({
       show: !state.show
     }));
-    //ReactDOM.findDOMNode(this.activePicRef);
   }
 
   render(){
@@ -225,12 +226,12 @@ class myPortfolio extends Component {
           </div>
         </div>
         <div className="frontEnd" id="portfolio">
-          <div className="portfolioRow" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}/> 
+          <div className="portfolioRow" /> 
           <h1>Portfolio:</h1> 
             <br /><br /><br />
             <Roll right>
-              <Card className="bg-dark text-white mb-3">
-              <Card.Img variant="top" show={this.open} src='p1.png' className="staticPic" id="static1"/>
+              <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}>
+              { this.state.show && (<Card.Img variant="top" show={this.open} src='p1.png' className="staticPic" id="static1" ref={this.photo1} />)}
               <Card.Img variant="top" src='p1.gif' className="activePic" />
                 <Card.Body>
                     <Card.Title>
