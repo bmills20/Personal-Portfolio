@@ -18,9 +18,10 @@ import ScrollspyNav from "react-scrollspy-nav";
 class myPortfolio extends Component {
   constructor(props) {
     super(props);
-    this.state = { show: true };
+    this.state = { show: true, show2: true };
     // Set up 'this' variable for setActivePic method
     this.toggleStaticPic = this.toggleStaticPic.bind(this);
+    this.toggleStaticPic2 = this.toggleStaticPic2.bind(this);
     // Create ref to the first portfolio's photo
     this.photo1 = React.createRef();
   }
@@ -29,6 +30,14 @@ class myPortfolio extends Component {
     this.setState(state => ({
       show: !state.show
     }));
+    console.log(this.state.show);
+  }
+
+  toggleStaticPic2(){
+    this.setState(state => ({
+      show2: !state.show2
+    }));
+    console.log(this.state.show2);
   }
 
   render(){
@@ -231,7 +240,7 @@ class myPortfolio extends Component {
             <br /><br /><br />
             <Roll right>
               <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}>
-              { this.state.show && (<Card.Img variant="top" show={this.open} src='p1.png' className="staticPic" id="static1" ref={this.photo1} />)}
+              { this.state.show && (<Card.Img variant="top" src='p1.png' className="staticPic" id="static1" />)}
               <Card.Img variant="top" src='p1.gif' className="activePic" />
                 <Card.Body>
                     <Card.Title>
@@ -254,8 +263,9 @@ class myPortfolio extends Component {
               </Card>
             </Roll>
           <Roll right delay={500}>
-              <Card className="bg-dark text-white mb-3">
-              <Card.Img variant="top" src="p2.png" id="folio2" />
+              <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic2} onMouseLeave={this.toggleStaticPic2}>
+              { this.state.show2 && (<Card.Img variant="top" show={this.open} src='p2.png' className="staticPic" id="static2" />)}
+              <Card.Img variant="top" src="p2.gif" className="activePic"/>
                 <Card.Body>
                     <Card.Title>
                       Beyond the Veil
