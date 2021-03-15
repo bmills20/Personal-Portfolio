@@ -64,10 +64,6 @@
   opacity: 100%;
 }
 
-.staticPic:hover {
-  opacity: 0;
-}
-
 .activePic {
   z-index: 1;
   width: 225px;
