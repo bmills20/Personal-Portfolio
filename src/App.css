@@ -127,6 +127,10 @@
   margin: 1.2vw;
 }
 
+#portfolio .card {
+  min-height: 538px;
+}
+
 .portfolioTitle {
   text-align: center;
 }

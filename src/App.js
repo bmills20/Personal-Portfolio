@@ -30,14 +30,12 @@ class myPortfolio extends Component {
     this.setState(state => ({
       show: !state.show
     }));
-    console.log(this.state.show);
   }
 
   toggleStaticPic2(){
     this.setState(state => ({
       show2: !state.show2
     }));
-    console.log(this.state.show2);
   }
 
   render(){
@@ -253,7 +251,7 @@ class myPortfolio extends Component {
                 <ListGroup className="list-group-flush" id="listp1">
                   <ListGroupItem className="bg-dark">Front-End</ListGroupItem>
                   <ListGroupItem className="bg-dark">HTML/CSS</ListGroupItem>
-                  <ListGroupItem>React</ListGroupItem>
+                  <ListGroupItem>React.js</ListGroupItem>
                   <ListGroupItem>JavaScript</ListGroupItem>
                   <ListGroupItem>
                     <Card.Link href="braxtonmills.com">Demo</Card.Link>
@@ -278,7 +276,6 @@ class myPortfolio extends Component {
                   <ListGroupItem className="bg-dark">Front-End</ListGroupItem>
                   <ListGroupItem>JavaScript</ListGroupItem>
                   <ListGroupItem>Physics Simulation</ListGroupItem>
-                  <ListGroupItem>Graphic Design</ListGroupItem>
                   <ListGroupItem>Sony Vegas</ListGroupItem>
                   <ListGroupItem>
                     <Card.Link href="https://raithhamzah.itch.io/beyond-the-veil-dreamphase">Demo</Card.Link>
@@ -290,28 +287,47 @@ class myPortfolio extends Component {
           </Roll>
           <Roll right delay={1000}>
               <Card className="bg-dark text-white mb-3">
-              <Card.Img variant="top" src="holder.js/225x125" />
+              <Card.Img variant="top" src="p3.png" />
                 <Card.Body>
                     <Card.Title>
-                      Project 3
+                      Kinga's K9s
                     </Card.Title>
                     <Card.Text>
-                      Project Description
+                      Freelance project work for Kinga's K9s, a dog training service
                     </Card.Text>
                 </Card.Body>
+                <ListGroup className="list-group-flush" id="listp1">
+                  <ListGroupItem className="bg-dark">Front-End</ListGroupItem>
+                  <ListGroupItem>JavaScript</ListGroupItem>
+                  <ListGroupItem>React.js</ListGroupItem>
+                  <ListGroupItem>Work in progress</ListGroupItem>
+                  <ListGroupItem>
+                    <Card.Link href="https://braxtonmills.com/kk9s/">Demo</Card.Link>
+                    <Card.Link href="https://github.com/bmills20/kk9s">github</Card.Link>
+                  </ListGroupItem>
+                </ListGroup>
               </Card>
           </Roll>
           <Roll right delay={1500}>
               <Card className="bg-dark text-white mb-3">
-              <Card.Img variant="top" src="holder.js/225x125" />
+              <Card.Img variant="top" src="p4.png" />
                 <Card.Body>
                     <Card.Title>
-                      Project 4
+                      Valorstats
                     </Card.Title>
                     <Card.Text>
-                      Project Description
+                      Interactive statistics application for the PC FPS Valorant
                     </Card.Text>
                 </Card.Body>
+                <ListGroup className="list-group-flush" id="listp1">
+                  <ListGroupItem className="bg-dark">Front-End/Back-End</ListGroupItem>
+                  <ListGroupItem>SQL</ListGroupItem>
+                  <ListGroupItem>React.js</ListGroupItem>
+                  <ListGroupItem>Work in progress</ListGroupItem>
+                  <ListGroupItem>
+                    <Card.Link href="https://github.com/bmills20/Valorstats">github</Card.Link>
+                  </ListGroupItem>
+                </ListGroup>
               </Card>
           </Roll>
           </div>
