@@ -236,7 +236,7 @@ class myPortfolio extends Component {
           <div className="portfolioRow" /> 
           <h1>Portfolio:</h1> 
             <br /><br /><br />
-            <Roll right>
+            <Fade right>
               <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}>
               { this.state.show && (<Card.Img variant="top" src='p1.png' className="staticPic" id="static1" />)}
               <Card.Img variant="top" src='p1.gif' className="activePic" />
@@ -259,8 +259,8 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-            </Roll>
-          <Roll right delay={500}>
+            </Fade>
+          <Fade right delay={500}>
               <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic2} onMouseLeave={this.toggleStaticPic2}>
               { this.state.show2 && (<Card.Img variant="top" show={this.open} src='p2.png' className="staticPic" id="static2" />)}
               <Card.Img variant="top" src="p2.gif" className="activePic"/>
@@ -284,8 +284,8 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-          </Roll>
-          <Roll right delay={1000}>
+          </Fade>
+          <Fade right delay={1000}>
               <Card className="bg-dark text-white mb-3">
               <Card.Img variant="top" src="p3.png" />
                 <Card.Body>
@@ -307,8 +307,8 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-          </Roll>
-          <Roll right delay={1500}>
+          </Fade>
+          <Fade right delay={1500}>
               <Card className="bg-dark text-white mb-3">
               <Card.Img variant="top" src="p4.png" />
                 <Card.Body>
@@ -329,7 +329,7 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-          </Roll>
+          </Fade>
           </div>
         </div>
     );
