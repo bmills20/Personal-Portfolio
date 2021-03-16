@@ -61,7 +61,7 @@
 .staticPic {
   position: absolute;
   z-index: 10;
-  opacity: 100%;
+  opacity: 100% !important;
 }
 
 .activePic {

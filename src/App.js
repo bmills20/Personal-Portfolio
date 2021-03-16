@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Particles from 'react-particles-js'; 
 import 'holderjs';
 import ScrollspyNav from "react-scrollspy-nav";
+import { Carousel } from "react-responsive-carousel";
 //useState hook allows for manipulating components without having to change class
 
 /*const useStyles = makeStyles({
@@ -30,6 +31,7 @@ class myPortfolio extends Component {
     this.setState(state => ({
       show: !state.show
     }));
+    console.log("toggle");
   }
 
   toggleStaticPic2(){
@@ -233,9 +235,8 @@ class myPortfolio extends Component {
           </div>
         </div>
         <div className="frontEnd" id="portfolio">
-          <div className="portfolioRow" /> 
-          <h1>Portfolio:</h1> 
-            <br /><br /><br />
+        <h1>Portfolio:</h1> 
+          <div className="portfolioRow" />
             <Fade right>
               <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}>
               { this.state.show && (<Card.Img variant="top" src='p1.png' className="staticPic" id="static1" />)}
