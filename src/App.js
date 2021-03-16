@@ -1,14 +1,26 @@
+// useState hook allows for manipulating components without having to change class
 import React, {useState, Component} from 'react';
+// ReactDOM
 import ReactDOM from 'react-dom';
+// my CSS
 import './App.css';
+// bootstrap components
 import {Button, Navbar, Nav, Card, ListGroup, ListGroupItem} from 'react-bootstrap';
+// Animation library
 import {Fade, Roll, Slide, Rotate, Flip} from 'react-reveal';
+// bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Particles from 'react-particles-js'; 
+// Particle generator for splash page
+import Particles from 'react-particles-js';
+// Temporary photo holder
 import 'holderjs';
+// Scroll tracker for navbar
 import ScrollspyNav from "react-scrollspy-nav";
+// React carousel for portfolio on mobile
 import { Carousel } from "react-responsive-carousel";
-//useState hook allows for manipulating components without having to change class
+// Carousel css
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 /*const useStyles = makeStyles({
   root: {
@@ -237,10 +249,11 @@ class myPortfolio extends Component {
         <div className="frontEnd" id="portfolio">
         <h1>Portfolio:</h1> 
           <div className="portfolioRow" />
-            <Fade right>
+          <Carousel infiniteLoop useKeyboardArrows autoPlay centerMode width={"50%"} showStatus={false} showThumbs={false}>
+            {/*<Fade right>*/}
               <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}>
-              { this.state.show && (<Card.Img variant="top" src='p1.png' className="staticPic" id="static1" />)}
-              <Card.Img variant="top" src='p1.gif' className="activePic" />
+              { this.state.show && (<Card.Img variant="top" src="p1.png" className="staticPic" id="static1" />)}
+              <Card.Img variant="top" src="p1.gif" className="activePic" />
                 <Card.Body>
                     <Card.Title>
                       Portfolio Website
@@ -260,8 +273,8 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-            </Fade>
-          <Fade right delay={500}>
+            {/*</Fade>*/}
+          {/*<Fade right delay={500}>*/}
               <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic2} onMouseLeave={this.toggleStaticPic2}>
               { this.state.show2 && (<Card.Img variant="top" show={this.open} src='p2.png' className="staticPic" id="static2" />)}
               <Card.Img variant="top" src="p2.gif" className="activePic"/>
@@ -285,8 +298,8 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-          </Fade>
-          <Fade right delay={1000}>
+          {/*</Fade>*/}
+          {/*<Fade right delay={1000}>*/}
               <Card className="bg-dark text-white mb-3">
               <Card.Img variant="top" src="p3.png" />
                 <Card.Body>
@@ -308,8 +321,8 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-          </Fade>
-          <Fade right delay={1500}>
+          {/* </Fade> */}
+          {/* <Fade right delay={1500}> */}
               <Card className="bg-dark text-white mb-3">
               <Card.Img variant="top" src="p4.png" />
                 <Card.Body>
@@ -330,7 +343,8 @@ class myPortfolio extends Component {
                   </ListGroupItem>
                 </ListGroup>
               </Card>
-          </Fade>
+          {/* </Fade> */}
+          </Carousel>
           </div>
         </div>
     );
