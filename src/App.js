@@ -44,6 +44,7 @@ class myPortfolio extends Component {
       show: !state.show
     }));
     console.log("toggle");
+    console.log(window.innerWidth);
   }
 
   toggleStaticPic2(){
@@ -249,9 +250,9 @@ class myPortfolio extends Component {
         <div className="frontEnd" id="portfolio">
         <h1>Portfolio:</h1> 
           <div className="portfolioRow" />
-          <Carousel infiniteLoop useKeyboardArrows autoPlay centerMode width={"50%"} showStatus={false} showThumbs={false}>
+          <Carousel infiniteLoop useKeyboardArrows autoPlay width={"50vw"} showStatus={false} showThumbs={false}>
             {/*<Fade right>*/}
-              <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}>
+              <Card className="bg-dark text-white mx-auto mb-3" onMouseEnter={this.toggleStaticPic} onMouseLeave={this.toggleStaticPic}>
               { this.state.show && (<Card.Img variant="top" src="p1.png" className="staticPic" id="static1" />)}
               <Card.Img variant="top" src="p1.gif" className="activePic" />
                 <Card.Body>
@@ -275,7 +276,7 @@ class myPortfolio extends Component {
               </Card>
             {/*</Fade>*/}
           {/*<Fade right delay={500}>*/}
-              <Card className="bg-dark text-white mb-3" onMouseEnter={this.toggleStaticPic2} onMouseLeave={this.toggleStaticPic2}>
+              <Card className="bg-dark text-white mx-auto mb-3" onMouseEnter={this.toggleStaticPic2} onMouseLeave={this.toggleStaticPic2}>
               { this.state.show2 && (<Card.Img variant="top" show={this.open} src='p2.png' className="staticPic" id="static2" />)}
               <Card.Img variant="top" src="p2.gif" className="activePic"/>
                 <Card.Body>
@@ -300,7 +301,7 @@ class myPortfolio extends Component {
               </Card>
           {/*</Fade>*/}
           {/*<Fade right delay={1000}>*/}
-              <Card className="bg-dark text-white mb-3">
+              <Card className="bg-dark mx-auto text-white mb-3">
               <Card.Img variant="top" src="p3.png" />
                 <Card.Body>
                     <Card.Title>
@@ -323,7 +324,7 @@ class myPortfolio extends Component {
               </Card>
           {/* </Fade> */}
           {/* <Fade right delay={1500}> */}
-              <Card className="bg-dark text-white mb-3">
+              <Card className="bg-dark text-white mx-auto mb-3">
               <Card.Img variant="top" src="p4.png" />
                 <Card.Body>
                     <Card.Title>
