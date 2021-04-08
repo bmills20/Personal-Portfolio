@@ -3,11 +3,19 @@
   src: url("./assets/avancement.otf");
 }
 
+html {
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
 .App {
   text-align: center;
   font-family: avancement;
   background-color: #1B1B1E;
   z-index: 1;
+
 }
 
 .App-logo {
@@ -58,6 +66,12 @@
   transition: transform 0.2s ease;
 }
 
+.contConfirm {
+  margin: 0px !important;
+
+  max-width: 700px !important;
+}
+
 .staticPic {
   position: absolute;
   z-index: 10;
@@ -71,7 +85,7 @@
   background-size: 100% 100%;
 }
 
-.card:hover {
+.hoverCard:hover {
   transform: scale(1.1);
 }
 
@@ -92,6 +106,27 @@
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
+  overflow: scroll;
+  scroll-snap-align: start;
+}
+
+.form-control{
+  background-color: #343a40 !important;
+  color: white !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+.form-control:focus {
+  outline-width: 2px !important;
+  outline-style: solid !important;
+  outline-color: white !important;
+}
+
+#tsparticles {
+  align-content: center;
+  overflow: scroll;
+  scroll-snap-align: start;
 }
 
 .skillFlex {
@@ -106,6 +141,10 @@
   width: 100%;
   margin-top: 10vh;
   margin-bottom: 5vh;
+}
+
+.frontEnd {
+  scroll-snap-align: start;
 }
 
 #frontEnd .card-title, #backEnd .card-title {
@@ -137,9 +176,28 @@
   margin-bottom: 0.5em !important;
 }
 
-/* #portfolio .card {
-  min-height: 538px; 538px
-} */
+#portfolio .card {
+  min-height: 450px;
+  max-height: 450px;
+} 
+
+#portfolio .card-text {
+  font-size: 0.9rem;
+}
+
+#portfolio .list-group-item {
+  font-size: 0.9rem;
+}
+
+#portfolio .card-body {
+  padding-left: 0.525em;
+  padding-right: 0.525em;
+  max-height: 7rem;
+}
+
+h1.portfolioHeader {
+  text-align: center;
+}
 
 #portfolio .carousel .slide .card {
   max-height: 500px !important;
